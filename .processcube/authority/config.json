@@ -1,0 +1,40 @@
+{
+  "issuerUrl": "http://authority:11560",
+  "applicationPort": 11560,
+  "development": true,
+  "database": {
+    "dialect": "sqlite",
+    "storage": "storage/database.sqlite"
+  },
+  "studio": {
+    "enabled": true,
+    "scope": "openid profile email engine_read engine_write"
+  },
+  "portals": [
+    {
+      "clientId": "portal",
+      "rootUrl": "http://portal:8082",
+      "scope": "openid profile email engine_read engine_write"
+    }
+  ],
+  "engines": [
+    {
+      "clientId": "engine",
+      "clientSecret": "engine",
+      "scope": "openid profile email engine_read engine_write"
+    }
+  ],
+  "extensions": {
+    "path": "/app/extensions",
+    "configs": {
+      "username_password": {
+        "usersPath": "/etc/authority/config/users.json",
+        "database": {
+          "dialect": "sqlite",
+          "storage": "storage/upe-database.sqlite",
+          "logging": false
+        }
+      }
+    }
+  }
+}

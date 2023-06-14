@@ -1,0 +1,33 @@
+{
+  "iam": {
+    "baseUrl": "http://authority:11560/",
+    "allowAnonymousRootAccess": false,
+    "clientId": "engine",
+    "clientSecret": "engine"
+  },
+  "extraInfo": {
+    "portalUrl": "http://localhost:8082/"
+  },
+  "httpServer": {
+    "host": "0.0.0.0",
+    "port": 8000
+  },
+  "logging": {
+    "outputPath": "logs"
+  },
+  "database": {
+    "username": null,
+    "password": null,
+    "database": null,
+    "host": null,
+    "port": null,
+    "dialect": "sqlite",
+    "storage": "atlasengine.sqlite",
+    "supportBigNumbers": true,
+    "resetPasswordRequestTimeToLive": 12,
+    "logging": false
+  },
+  "application": {
+    "name": "5Minds Engine"
+  }
+}
