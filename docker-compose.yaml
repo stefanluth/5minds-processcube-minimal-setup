@@ -1,5 +1,6 @@
 version: '3.5'
 services:
+  
   authority:
     image: 5minds/authority:3.0.0-feature-e441bc-libiob31
     environment:
@@ -11,7 +12,7 @@ services:
       - '11560:11560'
 
   portal:
-    image: 5minds/portal:4.0.0-alpha.4
+    image: 5minds/portal:4.0.0-alpha.8
     environment:
       CONFIG_PATH: /etc/portal/config/config.json
     volumes:
@@ -20,7 +21,7 @@ services:
       - '8082:8082'
 
   engine:
-    image: 5minds/engine:14.2.4
+    image: 5minds/engine:13.4.6
     environment:
       CONFIG_PATH: /etc/engine/config/config.json
     volumes:

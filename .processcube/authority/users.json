@@ -1,36 +1,20 @@
 {
   "users": [
     {
+      "accountId": "admin-id",
       "username": "admin",
       "password": "admin",
+      "scopes": [
+        "openid",
+        "profile",
+        "email",
+        "offline_access",
+        "engine_read",
+        "engine_write",
+        "upe_admin"
+      ],
       "claims": {
-        "can_read_process_model": true,
-        "can_read_cronjob_history": true,
-        "can_subscribe_to_events": true,
-        "can_trigger_messages": true,
-        "can_trigger_signals": true,
-        "can_terminate_process": true,
-        "can_write_process_model": true,
-        "can_delete_process_model": true,
-        "can_manage_process_instances": true,
-        "can_access_external_tasks": true,
-        "upe__can_manage_users": true
-      }
-    },
-    {
-      "username": "alice",
-      "password": "alice",
-      "claims": {
-        "can_read_process_model": true,
-        "can_subscribe_to_events": true
-      }
-    },
-    {
-      "username": "bob",
-      "password": "bob",
-      "claims": {
-        "can_read_process_model": true,
-        "can_subscribe_to_events": true
+        "email": "admin@dummy.de"
       }
     }
   ]
