@@ -1,30 +1,21 @@
-version: '3.5'
+version: "3.5"
 services:
-  
   authority:
-    image: 5minds/authority:3.0.0-feature-e441bc-libiob31
+    image: 5minds/processcube_authority:2023-2
     environment:
       CONFIG_PATH: /etc/authority/config/config.json
+      UPE_SEED_PATH: /etc/authority/config/upeSeedingData.json
     volumes:
       - ./.processcube/authority/config.json:/etc/authority/config/config.json
-      - ./.processcube/authority/users.json:/etc/authority/config/users.json
+      - ./.processcube/authority/upeSeedingData.json:/etc/authority/config/upeSeedingData.json
     ports:
-      - '11560:11560'
-
-  portal:
-    image: 5minds/portal:4.0.1
-    environment:
-      CONFIG_PATH: /etc/portal/config/config.json
-    volumes:
-      - ./.processcube/portal/config.json:/etc/portal/config/config.json
-    ports:
-      - '8082:8082'
+      - 11560:11560
 
   engine:
-    image: 5minds/engine:15.0.0
+    image: 5minds/processcube_engine:2023-2
     environment:
       CONFIG_PATH: /etc/engine/config/config.json
     volumes:
       - ./.processcube/engine/config.json:/etc/engine/config/config.json:ro
     ports:
-      - '8000:8000'
+      - 8000:8000
