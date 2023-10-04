@@ -1,4 +1,6 @@
-# How to run
+# Minimales 5Minds ProcessCube Setup mit Engine und Authority
+
+## How to run
 
 ```shell
 docker compose up
