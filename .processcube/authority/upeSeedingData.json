@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "username": "admin",
+      "password": "admin",
+      "scopes": ["openid", "profile", "email", "engine_read", "engine_write", "upe_admin"],
+      "claims": {
+        "name": "Admin",
+        "email": "admin@processcube.example"
+      }
+    },
+    {
+      "username": "user",
+      "password": "user",
+      "scopes": ["openid", "profile", "email", "engine_read", "foo"],
+      "claims": {
+        "name": "user",
+        "bar": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+name: Run
+
+on: [push]
+
+jobs:
+  run:
+    name: Docker Compose Up
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Docker Compose Up
+        run: docker-compose up -d
+
+      - name: Wait for 30 seconds
+        run: sleep 30
+
+      - name: Show logs
+        run: docker-compose logs
+
+      - name: Docker Compose Down
+        run: docker-compose down

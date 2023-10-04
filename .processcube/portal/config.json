@@ -1,9 +1,0 @@
-{
-  "useAuthority": true,
-  "authorityConfiguration": {
-    "clientId": "portal",
-    "scope": "openid profile email engine_read engine_write"
-  },
-  "applicationBaseUrl": "http://portal:8082",
-  "engineUrl": "http://localhost:8000"
-}
